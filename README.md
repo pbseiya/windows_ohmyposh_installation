@@ -86,8 +86,8 @@
 1.  `notepad $PROFILE`
 2.  ใส่ Script เรียกใช้งาน:
     ```powershell
-    $env:Path += ";C:\Users\pongsak_b\AppData\Local\Programs\oh-my-posh\bin" # กรณี Manual Install
-    $env:POSH_THEME = "C:\Users\pongsak_b\.poshthemes\vibrant-python.omp.json"
+    $env:Path += ";$env:LOCALAPPDATA\Programs\oh-my-posh\bin" # กรณี Manual Install
+    $env:POSH_THEME = "$env:USERPROFILE\.poshthemes\vibrant-python.omp.json"
     oh-my-posh init powershell --config $env:POSH_THEME | Invoke-Expression
     
     Import-Module PSReadLine
